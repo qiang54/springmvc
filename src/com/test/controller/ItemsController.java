@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.test.pojo.Items;
+import com.test.pojo.QueryVo;
 import com.test.service.ItemsService;
 
 
@@ -66,11 +67,35 @@ public class ItemsController {
 		return "success";
 	}
 	
+	/**
+	 *查询
+	 * @param vo
+	 * @return
+	 */
+	@RequestMapping("/search")
+	public String search(QueryVo vo) {
+		System.out.println(vo);
+		return "";
+	}
 	
+	/**
+	 * 删除全部
+	 */
+	@RequestMapping("/delAll")
+	public String delAll(QueryVo vo) {
+		//批量删除，<input type="checkbox"，当选中时，可以被提交
+		System.out.println(vo);
+		return "";
+	}
 	
-	
-	
-	
+	/**
+	 * 批量修改
+	 */
+	@RequestMapping("/updateAll")
+	public String updateAll(QueryVo vo) {
+		System.out.println(vo);
+		return "";
+	}
 	
 	
 	
